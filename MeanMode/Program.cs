@@ -7,7 +7,9 @@ namespace MeanMode
     {
         static void Main(string[] args)
         {
+            int[] numbers = { 0, 0, 0, 3, 3, 3, -3, -3, -3, };
 
+            Console.WriteLine((MeanMode(numbers)));
         }
 
         public static bool MeanMode(int[] array)
@@ -46,7 +48,7 @@ namespace MeanMode
                     numberCounts[number] = numberCounts[number] + 1;
 
                     //Replaces the previous top maximum value and key with the current one.
-                    if (numberCounts[number] > max_value)
+                    if (numberCounts[number] >= max_value)
                     {
                         max_value = numberCounts[number];
                         max_key = number;
